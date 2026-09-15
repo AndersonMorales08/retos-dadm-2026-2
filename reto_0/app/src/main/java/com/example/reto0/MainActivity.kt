@@ -1,5 +1,6 @@
 package com.example.reto0
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -22,17 +23,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.reto0.ui.theme.Reto0Theme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             Reto0Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize()) {
                     Greeting(
-                        name = "World",
-                        modifier = Modifier.padding(innerPadding)
+                        name = "Mundo",
                     )
                 }
             }
@@ -41,7 +43,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String) {
     Column(
         Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -51,13 +53,14 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             modifier = Modifier
                 .background(
                     color = Color(0xFFC8E6C9),
-                    shape = RoundedCornerShape(12.dp)
+                    shape = RoundedCornerShape(size = 12.dp)
                 )
-                .padding(horizontal = 24.dp, vertical = 16.dp)
+                .padding(horizontal = 20.dp, vertical = 16.dp),
+            contentAlignment = Alignment.Center
         ) {
             Text(
-                text = "Hello $name!",
-                modifier = modifier,
+                textAlign = TextAlign.Center,
+                text = "Hola $name!",
                 color = Color(0xFF1B5E20)
             )
         }
