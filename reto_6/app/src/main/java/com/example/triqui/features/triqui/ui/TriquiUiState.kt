@@ -2,12 +2,19 @@ package com.example.triqui.features.triqui.ui
 
 import kotlinx.serialization.Serializable
 
+@Serializable
 enum class Player { HUMAN, COMPUTER }
 
+@Serializable
 sealed interface GameStatus {
+    @Serializable
     object HumanTurn : GameStatus
+
+    @Serializable
     object ComputerTurn : GameStatus
+    @Serializable
     data class Winner(val winner: Player) : GameStatus
+    @Serializable
     object Tie : GameStatus
 }
 

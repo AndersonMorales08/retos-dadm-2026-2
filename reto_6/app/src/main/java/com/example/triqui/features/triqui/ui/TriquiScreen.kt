@@ -41,19 +41,35 @@ import com.example.triqui.core.components.Menu
 import com.example.triqui.features.triqui.utils.SoundHelper
 import androidx.window.core.layout.WindowSizeClass
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
+import androidx.lifecycle.createSavedStateHandle
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.triqui.core.repositories.TriquiRepository
 
 @OptIn(ExperimentalMaterial3AdaptiveApi::class)
 @Composable
 fun TriquiScreen(
-    triquiViewModel: TriquiViewModel = viewModel(),
     windowSizeClass: WindowSizeClass = currentWindowAdaptiveInfo(supportLargeAndXLargeWidth = true).windowSizeClass
 
 ) {
+    val context = LocalContext.current
+
+    val triquiViewModel: TriquiViewModel = viewModel(
+        factory = viewModelFactory {
+            initializer {
+                // Aquí instancias tu ViewModel pasándole lo que necesita
+                val savedStateHandle = createSavedStateHandle()
+                TriquiViewModel(
+                    state= savedStateHandle,
+                    repository = TriquiRepository(context)
+                )
+            }
+        }
+    )
+
     val showTopAppBar = windowSizeClass.isHeightAtLeastBreakpoint(WindowSizeClass.HEIGHT_DP_MEDIUM_LOWER_BOUND)
     val bgColor = Color(0xFF132F20)
     val neonGreen = Color(0xFF4ADE80)
-
-    val context = LocalContext.current
 
     val uiState by triquiViewModel.uiState.collectAsState()
     val level by triquiViewModel.level.collectAsStateWithLifecycle()
