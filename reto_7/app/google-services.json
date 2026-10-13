@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "488599459404",
+    "project_id": "triquionline-7382d",
+    "storage_bucket": "triquionline-7382d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488599459404:android:672f8ca93df00fcb8546e9",
+        "android_client_info": {
+          "package_name": "com.example.triqui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACHSyIPs1D2ObaqOZxY4pviqyMwvZO6hA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
