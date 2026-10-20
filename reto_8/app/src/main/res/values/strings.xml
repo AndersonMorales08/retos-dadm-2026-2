@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DirectEmpresarial</string>
+    <string name="companies_title">Companies</string>
+    <string name="companies_subtitle">Your business connections, in one place.</string>
+    <string name="add_company_cd">Add company</string>
+    <string name="search_placeholder">Search by company name</string>
+    <string name="filter_cd">Search and filter</string>
+    <string name="sort_name">Name A–Z ↓</string>
+    <plurals name="companies_count">
+        <item quantity="one">%d company</item>
+        <item quantity="other">%d companies</item>
+    </plurals>
+    <string name="empty_list">No companies match your search.</string>
+    <string name="banner_title">Company deleted</string>
+    <string name="banner_message">%1$s was removed from your directory.</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="back">Back</string>
+    <string name="nav_companies">Companies</string>
+    <string name="nav_saved">Saved</string>
+    <string name="nav_settings">Settings</string>
+
+    <string name="class_technology">Technology</string>
+    <string name="class_professional_services">Professional services</string>
+    <string name="class_wholesale">Wholesale</string>
+    <string name="class_energy">Energy</string>
+    <string name="class_design_creative">Design &amp; creative</string>
+
+    <string name="class_consultory">Consultoría</string>
+    <string name="class_custom_development">Desarrollo a la medida</string>
+    <string name="class_software_factory">Fábrica de software</string>
+    <string name="class_no_category">Sin categoría</string>
+
+    <string name="company_details">Company details</string>
+    <string name="directory_since">In your directory since %1$s</string>
+    <string name="website_url">Website URL</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="products_services">Products and services</string>
+    <string name="edit_company">Edit company</string>
+    <string name="delete_company">Delete company</string>
+    <string name="delete_title">Delete this company?</string>
+    <string name="delete_message">%1$s will be permanently removed from your directory. This can\'t be undone.</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="form_add_title">Add company</string>
+    <string name="form_edit_title">Edit company</string>
+    <string name="form_add_headline">A new connection</string>
+    <string name="form_add_sub">Add a company to your shared directory.</string>
+    <string name="form_edit_headline">Keep the details current</string>
+    <string name="form_edit_sub">Update the information for %1$s.</string>
+    <string name="field_name">Company name</string>
+    <string name="field_classification">Classification</string>
+    <string name="select_classification">Select a classification</string>
+    <string name="required_error">This field is required</string>
+    <string name="save_changes">Save changes</string>
+    <string name="required_note">* Required fields</string>
+
+    <string name="filter_title">Search &amp; filter</string>
+    <string name="reset">Reset</string>
+    <string name="filter_headline">Find the right company</string>
+    <string name="filter_sub">Narrow your directory by name or classification.</string>
+    <string name="all_classifications">All classifications</string>
+    <string name="filters_none">No filters applied</string>
+    <string name="filters_one">1 filter applied</string>
+    <string name="filters_both">Both filters applied</string>
+    <string name="filter_results">%1$d OF %2$d COMPANIES</string>
+    <string name="clear_all">Clear all</string>
+    <string name="filter_footer_title">Looking for something else?</string>
+    <string name="filter_footer_body">Change either filter to explore more companies in your directory.</string>
+    <string name="no_results">No companies match your filters.</string>
+</resources>
